@@ -1,0 +1,50 @@
+name: Reproductions
+
+# Re-runs the published-result reproductions in quick mode and fails when a result leaves
+# its tolerance (`aircompkit reproduce NAME --check`). MNIST is fetched by this workflow
+# only; the library itself never downloads data.
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 4 * * 1"   # weekly, Monday 04:17 UTC
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      AIRCOMPKIT_DATA: ${{ github.workspace }}/data
+      MPLBACKEND: Agg
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e ".[plot]"
+      - name: Cache MNIST
+        uses: actions/cache@v4
+        with:
+          path: data/mnist.npz
+          key: mnist-npz-v1
+      - name: Fetch MNIST (Keras layout)
+        run: |
+          mkdir -p data
+          if [ ! -f data/mnist.npz ]; then
+            curl -fsSL -o data/mnist.npz https://storage.googleapis.com/tensorflow/tf-keras-datasets/mnist.npz
+          fi
+          echo "731c5ac602752760c8e48fbffcf8c3b850d9dc2a2aedcf2cc48468fc17b673d1  data/mnist.npz" | sha256sum -c -
+      - name: Yang et al. 2020 (Figs. 4-5)
+        run: python -m aircompkit reproduce yang2020 --quick --check --out results/yang2020
+      - name: Zhu et al. 2020 (Figs. 4, 7b)
+        run: python -m aircompkit reproduce zhu2020 --quick --check --out results/zhu2020
+      - name: Benchmarks (quick)
+        run: python -m aircompkit bench --quick --repeat 1 --out results/bench
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: reproductions
+          path: results/

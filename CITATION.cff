@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use AirCompKit, please cite it as below."
+title: "AirCompKit: a security-aware simulator for over-the-air computation"
+type: software
+version: 1.0.0
+date-released: "2026-11-20"
+license: MIT
+authors:
+  - given-names: "M. A."
+    family-names: "Moyeen"
+    orcid: "https://orcid.org/0009-0006-5429-7403"
+  - given-names: "Kuljeet"
+    family-names: "Kaur"
+    orcid: "https://orcid.org/0000-0003-4597-1700"
+  - given-names: "Anjali"
+    family-names: "Agarwal"
+    orcid: "https://orcid.org/0000-0003-3639-3304"
+repository-code: "https://github.com/moyeendev/AirCompKit"
+keywords:
+  - over-the-air computation
+  - federated learning
+  - physical-layer security

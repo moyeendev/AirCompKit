@@ -1,0 +1,24 @@
+# K = 20 devices in a 10-100 m annulus, Rayleigh fading with path loss,
+# MSE-optimal power control, real-valued symbols. Run with:
+#   python -m aircompkit run configs/rayleigh_optimal.yaml --out results/rayleigh_optimal
+devices:
+  name: uniform_disc
+  K: 20
+  p_max: 1.0          # W (linear); per-symbol peak power
+  r_min: 10.0
+  r_max: 100.0
+channel:
+  name: rayleigh
+  pathloss:
+    exponent: 3.0
+    ref_distance: 1.0
+    ref_gain_db: -30.0
+    shadowing_db: 0.0
+power_control: optimal      # or: truncated_inversion, full_power, channel_inversion
+target: mean
+noise_var: 1.0e-10          # -100 dBW
+symbols: real
+seed: 0
+run:
+  trials: 2000
+  dim: 32

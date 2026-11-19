@@ -1,0 +1,37 @@
+# Over-the-air FedAvg on the built-in synthetic task: 20 devices, 4-antenna server,
+# truncated channel inversion, 8 independent sub-channels per round.
+#   python -m aircompkit train configs/otafl_synthetic.yaml --out results/otafl
+# For MNIST: set learning.dataset to mnist and pass --data-root (or set AIRCOMPKIT_DATA).
+devices:
+  name: uniform_disc
+  K: 20
+  p_max: 1.0e-3
+  r_min: 10.0
+  r_max: 100.0
+channel:
+  name: rayleigh
+  n_rx: 4
+  pathloss:
+    exponent: 3.0
+    ref_gain_db: -30.0
+receiver: eigen
+power_control:
+  name: truncated_inversion
+  threshold: 0.1
+noise_var: 1.0e-12
+symbols: real
+seed: 0
+learning:
+  dataset: synthetic
+  partition:
+    name: dirichlet
+    alpha: 0.5
+  model:
+    name: mlp
+    hidden: [32]
+  rounds: 100
+  local_steps: 2
+  batch_size: 32
+  lr: 0.1
+  eval_every: 20
+  subchannels: 8

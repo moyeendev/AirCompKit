@@ -1,0 +1,29 @@
+# K = 20 devices, 8-antenna server with correlated Rician fading, max-min receive
+# beamforming, optimal power control, and imperfect CSI + residual phase errors.
+#   python -m aircompkit run configs/mimo_maxmin_csi.yaml --out results/mimo
+devices:
+  name: uniform_disc
+  K: 20
+  p_max: 1.0
+  r_min: 10.0
+  r_max: 100.0
+channel:
+  name: rician
+  k_factor: 3.0
+  n_rx: 8
+  corr: 0.3
+  pathloss:
+    exponent: 3.0
+    ref_gain_db: -30.0
+receiver: maxmin              # eigen | maxmin | sdr | joint_mmse
+power_control: optimal
+impairments:
+  csi_error: 0.02             # relative CSI error variance
+  phase_error_std: 0.05       # radians
+target: mean
+noise_var: 1.0e-10
+symbols: real
+seed: 0
+run:
+  trials: 500
+  dim: 16

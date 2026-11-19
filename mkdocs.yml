@@ -1,0 +1,82 @@
+site_name: AirCompKit
+site_description: Security-aware simulator for over-the-air computation and over-the-air federated learning.
+site_url: https://moyeendev.github.io/AirCompKit/
+repo_url: https://github.com/moyeendev/AirCompKit
+repo_name: moyeendev/AirCompKit
+edit_uri: edit/main/docs/
+copyright: MIT License
+
+theme:
+  name: material
+  features:
+    - navigation.sections
+    - navigation.top
+    - content.code.copy
+    - search.highlight
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle: {icon: material/weather-night, name: Dark mode}
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle: {icon: material/weather-sunny, name: Light mode}
+
+nav:
+  - Home: index.md
+  - Installation: install.md
+  - User guide: guide.md
+  - Command line: cli.md
+  - Tutorials:
+      - 1. AirComp basics: tutorials/01_aircomp_basics.ipynb
+      - 2. Multi-antenna and impairments: tutorials/02_multi_antenna_and_impairments.ipynb
+      - 3. Over-the-air FL: tutorials/03_over_the_air_fl.ipynb
+      - 4. Attacks and defences: tutorials/04_attacks_and_defences.ipynb
+      - 5. Custom components: tutorials/05_custom_components.ipynb
+      - 6. Reproductions and benchmarks: tutorials/06_reproductions_and_benchmarks.ipynb
+  - Reproductions: reproductions.md
+  - Benchmarks: benchmarks.md
+  - API reference:
+      - Core: api/core.md
+      - Physical layer: api/physical.md
+      - Learning: api/learning.md
+      - Adversary and defences: api/security.md
+      - Metrics: api/metrics.md
+      - Reproductions and benchmarks: api/reproduce.md
+  - Changelog: changelog.md
+
+plugins:
+  - search
+  - mkdocs-jupyter:
+      execute: false
+      include_source: true
+  - mkdocstrings:
+      handlers:
+        python:
+          paths: [src]
+          options:
+            docstring_style: sphinx
+            show_source: true
+            show_root_heading: true
+            show_root_full_path: false
+            members_order: source
+            filters: ["!^_"]
+            merge_init_into_class: true
+            show_signature_annotations: true
+            separate_signature: true
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc: {permalink: true}
+  - pymdownx.arithmatex: {generic: true}
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.snippets: {base_path: ["."], check_paths: true}
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js
+
+exclude_docs: |
+  execute_notebooks.py
+  tutorials/_output/
