@@ -24,6 +24,6 @@ paper/*.fdb_latexmk
 paper/*.synctex.gz
 .coverage
 
-# SoftwareX manuscript: kept locally until the paper is published
+# Local working files, not part of the package
 paper/
 PLAN.md

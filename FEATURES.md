@@ -2,8 +2,8 @@
 
 Priority tiers:
 - **MVP**: needed for a credible first public release (end of P3)
-- **v1.0**: needed for the SoftwareX submission (end of P6)
-- **Future**: listed in the paper as future work. Do not build before submission.
+- **v1.0**: needed for the 1.0 release (end of P6)
+- **Future**: planned after 1.0.
 
 ★ marks features that support the main novelty claims.
 

@@ -11,7 +11,7 @@ Metadata release; the code is unchanged from 1.0.0.
 ### Changed
 - Authors are M. A. Moyeen and Md. Abdul Awal, with affiliations and contact emails, in
   `pyproject.toml`, `CITATION.cff` and `.zenodo.json`.
-- The licence file is `LICENSE.txt` (MIT, unchanged), as SoftwareX requires.
+- The licence file is `LICENSE.txt` (MIT, unchanged).
 
 ## [1.0.0] - 2026-11-20
 

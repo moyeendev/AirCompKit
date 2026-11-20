@@ -2,8 +2,8 @@
 
 ## One-time setup (repository owner)
 
-1. **Make the repository public** (Settings → General → Danger zone). SoftwareX requires public
-   code, and Zenodo archives only public repositories.
+1. **Make the repository public** (Settings → General → Danger zone). Zenodo archives only public
+   repositories.
 2. **PyPI trusted publishing:** sign in at <https://pypi.org>, open *Your account → Publishing →
    Add a new pending publisher*, and enter: PyPI project `aircompkit`, owner `moyeendev`,
    repository `AirCompKit`, workflow `release.yml`, environment `pypi`. No API token is stored in
