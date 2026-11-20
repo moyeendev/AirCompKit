@@ -49,5 +49,5 @@ plain dicts or YAML files, and new components plug in with one decorator (see
 
 ## Citing
 
-See [`CITATION.cff`](https://github.com/moyeendev/AirCompKit/blob/main/CITATION.cff). A SoftwareX
-paper is in preparation.
+Cite the archived software: DOI [10.5281/zenodo.24388026](https://doi.org/10.5281/zenodo.24388026) (all versions).
+See also [`CITATION.cff`](https://github.com/moyeendev/AirCompKit/blob/main/CITATION.cff).
