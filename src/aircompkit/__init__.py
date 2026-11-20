@@ -1,6 +1,6 @@
 """AirCompKit: security-aware over-the-air computation simulator."""
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 # Importing the component packages registers their components.
 from aircompkit import (  # noqa: F401

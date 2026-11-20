@@ -4,6 +4,15 @@ All notable changes are recorded here. The project follows semantic versioning.
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-11-20
+
+Metadata release; the code is unchanged from 1.0.0.
+
+### Changed
+- Authors are M. A. Moyeen and Md. Abdul Awal, with affiliations and contact emails, in
+  `pyproject.toml`, `CITATION.cff` and `.zenodo.json`.
+- The licence file is `LICENSE.txt` (MIT, unchanged), as SoftwareX requires.
+
 ## [1.0.0] - 2026-11-20
 
 First public release. Everything below was developed in phases P0-P6.

@@ -10,7 +10,7 @@
 
 **Security-aware simulator for over-the-air computation (AirComp) and over-the-air federated learning (OTA-FL).**
 
-> Status: **v1.0.0**. AirComp over AWGN, Rayleigh and Rician
+> Status: **v1.0.1**. AirComp over AWGN, Rayleigh and Rician
 > channels (multi-antenna server, spatial correlation, path loss/shadowing, imperfect CSI,
 > phase errors), four power-control schemes, four receive beamformers, over-the-air
 > federated learning (FedSGD/FedAvg, NumPy models, MNIST/Fashion-MNIST/synthetic data,
