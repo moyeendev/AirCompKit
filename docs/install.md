@@ -3,6 +3,13 @@
 AirCompKit needs Python 3.10 or newer. The core depends only on NumPy and PyYAML.
 
 ```bash
+pip install aircompkit             # core: NumPy and PyYAML
+pip install "aircompkit[plot]"     # + matplotlib, for figures from `reproduce`
+```
+
+For development, install from a clone:
+
+```bash
 git clone https://github.com/moyeendev/AirCompKit.git
 cd AirCompKit
 python -m pip install -e .            # core

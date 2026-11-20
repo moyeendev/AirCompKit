@@ -4,6 +4,7 @@
 [![Reproductions](https://github.com/moyeendev/AirCompKit/actions/workflows/reproduce.yml/badge.svg)](https://github.com/moyeendev/AirCompKit/actions/workflows/reproduce.yml)
 [![Docs](https://github.com/moyeendev/AirCompKit/actions/workflows/docs.yml/badge.svg)](https://moyeendev.github.io/AirCompKit/)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/pypi/v/aircompkit.svg)](https://pypi.org/project/aircompkit/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24388026.svg)](https://doi.org/10.5281/zenodo.24388026)
 [![Python 3.10-3.13](https://img.shields.io/badge/python-3.10--3.13-blue.svg)](pyproject.toml)
 
@@ -43,7 +44,10 @@ AirComp results.
 
 ## Install
 
-From PyPI once v1.0.0 is released: `pip install aircompkit` (add `[plot]` for figures).
+```bash
+pip install aircompkit            # or "aircompkit[plot]" for figures
+```
+
 For development:
 
 ```bash
