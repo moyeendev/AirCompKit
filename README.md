@@ -3,7 +3,7 @@
 [![CI](https://github.com/moyeendev/AirCompKit/actions/workflows/ci.yml/badge.svg)](https://github.com/moyeendev/AirCompKit/actions/workflows/ci.yml)
 [![Reproductions](https://github.com/moyeendev/AirCompKit/actions/workflows/reproduce.yml/badge.svg)](https://github.com/moyeendev/AirCompKit/actions/workflows/reproduce.yml)
 [![Docs](https://github.com/moyeendev/AirCompKit/actions/workflows/docs.yml/badge.svg)](https://moyeendev.github.io/AirCompKit/)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.txt)
 [![PyPI](https://img.shields.io/pypi/v/aircompkit.svg)](https://pypi.org/project/aircompkit/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24388026.svg)](https://doi.org/10.5281/zenodo.24388026)
 [![Python 3.10-3.13](https://img.shields.io/badge/python-3.10--3.13-blue.svg)](pyproject.toml)
@@ -120,4 +120,4 @@ See [CITATION.cff](CITATION.cff). A journal paper is in preparation.
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT. See [LICENSE.txt](LICENSE.txt).
