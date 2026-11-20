@@ -17,12 +17,12 @@ authors:
   - given-names: "M. A."
     family-names: "Moyeen"
     orcid: "https://orcid.org/0009-0006-5429-7403"
-  - given-names: "Kuljeet"
-    family-names: "Kaur"
-    orcid: "https://orcid.org/0000-0003-4597-1700"
-  - given-names: "Anjali"
-    family-names: "Agarwal"
-    orcid: "https://orcid.org/0000-0003-3639-3304"
+    email: "moyeeniict@gmail.com"
+    affiliation: "Institute of Information and Communication Technology, Khulna University of Engineering & Technology"
+  - given-names: "Md. Abdul"
+    family-names: "Awal"
+    email: "awal@cse.kuet.ac.bd"
+    affiliation: "Department of Computer Science and Engineering, Khulna University of Engineering & Technology"
 repository-code: "https://github.com/moyeendev/AirCompKit"
 keywords:
   - over-the-air computation
