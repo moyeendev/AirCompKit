@@ -115,7 +115,7 @@ or the four IDX files in a folder and pass `--data-root` or set `AIRCOMPKIT_DATA
 ## Citing
 
 Please cite the archived software, DOI [10.5281/zenodo.24388026](https://doi.org/10.5281/zenodo.24388026)
-(all versions; v1.0.0 is [10.5281/zenodo.24388027](https://doi.org/10.5281/zenodo.24388027)).
+(all versions; v1.0.1 is [10.5281/zenodo.24394752](https://doi.org/10.5281/zenodo.24394752)).
 See [CITATION.cff](CITATION.cff). A journal paper is in preparation.
 
 ## License

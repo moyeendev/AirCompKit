@@ -10,8 +10,8 @@ identifiers:
     value: "10.5281/zenodo.24388026"
     description: "Concept DOI (all versions)"
   - type: doi
-    value: "10.5281/zenodo.24388027"
-    description: "Version 1.0.0"
+    value: "10.5281/zenodo.24394752"
+    description: "Version 1.0.1"
 license: MIT
 authors:
   - given-names: "M. A."
